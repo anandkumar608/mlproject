@@ -104,8 +104,10 @@
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
         </div>
     </form>
+    {% if results%}
     <h2>
        THE  prediction is {{results}}
     </h2>
+    {% endif %}
    <body>
 </html>
