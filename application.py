@@ -38,12 +38,7 @@ def predict_datapoint():
         print("Mid Prediction")
         results=predict_pipeline.predict(pred_df)
         print("after Prediction")
-        if isinstance(results, (list, tuple)):
-           prediction = results[0]
-        elif hasattr(results, "item"):   # numpy array / scalar
-             prediction = results.item()
-        else:
-          prediction = results
+        prediction=float(results[0])
         return render_template("index.html", results=prediction)
     
 
